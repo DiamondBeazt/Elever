@@ -1,6 +1,6 @@
 let x = 10; let y = 10; let r = 200; g = 180; b = 0;
-let xDirection = 0;
-let yDirection = 0;
+let xPosition = 0;
+let yPosition = 0;
 
 
 function setup() {
@@ -83,16 +83,16 @@ function draw() {
     }
 
     // loop over array - og spærg hver firkant om den rammer dig
-    x += xDirection;
-    y += yDirection;
+    x += xPosition;
+    y += yPosition;
     rect(x, y, 10);
     let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
        x = sensor.x * 100;
        y = senosr.y * 100;
-       xDirection = (xDirection + x) + "px"
-       yDirection = (yDirection - y) + "px"
+       xPosition = (xPosition + x) + "px"
+       yPosition = (yPosition - y) + "px"
      };
      console.log(x,y)
 }
@@ -102,7 +102,7 @@ function intersects(range) {
     
     if (range.x + range.w < x || range.x  > x + 10 || range.y + range.h < y || range.y > y + 10)
       return false;
-    else if(yDirection < 3 && xDirection <3){
+    else if(yPosition < 3 && xPosition <3){
   
     }
   }
