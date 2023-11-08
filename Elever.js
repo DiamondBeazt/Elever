@@ -3,8 +3,8 @@ let x = 20; let y = 20; let r = 200; g = 180; b = 0;
 let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
-       x = sensor.x * 10;
-       y = sensor.y * 10;
+       x = sensor.x * 1000;
+       y = sensor.y * 1000;
        player.style.left = (player.offsetLeft + x) + "px"
        player.style.top = (player.offsetTop - y) + "px"
      };
@@ -101,11 +101,11 @@ function draw() {
     
 
 function intersects(range) {
-    console.log(range)
     if (range.x + range.w < x || range.x  > x + 10 || range.y + range.h < y || range.y > y + 10)
       return false;
     else if(yPosition < 3 && xPosition <3){
-  
+      return true;
     }
+    console.log(true)
   }
 
