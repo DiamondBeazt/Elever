@@ -1,17 +1,15 @@
-let x; let y; let r = 200; g = 180; b = 0;
-let xPosition = 0;
-let yPosition = 0;
+let x = 20; let y = 20; let r = 200; g = 180; b = 0;
+
 
 let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
        x = sensor.x * 10;
        y = sensor.y * 10;
-       xPosition.style.left = (xPosition.offsetLeft + x) + "px"
-       yPosition.style.top = (yPosition.offsetTop - y) + "px"
+       player.style.left = (player.offsetLeft + x) + "px"
+       player.style.top = (player.offsetTop - y) + "px"
      };
      console.log(x,y)
-     console.log(xPosition,yPosition)
 
 function setup() {
     canvas = createCanvas(500, 800, 'beholder');
@@ -100,6 +98,7 @@ function draw() {
     x += xPosition;
     y += yPosition;
     rect(x, y, 10);
+    player =  rect(x, y, 10);
     
 }
     
