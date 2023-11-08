@@ -86,15 +86,8 @@ function draw() {
     x += xPosition;
     y += yPosition;
     rect(x, y, 10);
-    let sensor = new Gyroscope();
-    sensor.start();
-    sensor.onreading = () => {
-       x = sensor.x * 100;
-       y = senosr.y * 100;
-       xPosition = (xPosition + x) + "px"
-       yPosition = (yPosition - y) + "px"
-     };
-     console.log(x,y)
+
+  console.log(xPosition,yPosition)
 }
     
 
