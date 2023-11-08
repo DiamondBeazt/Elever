@@ -97,6 +97,7 @@ function draw() {
     rect(x, y, 10);
     player =  rect(x, y, 10);
     
+    console.log(player)
 }
     
 
