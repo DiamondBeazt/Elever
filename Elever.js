@@ -2,6 +2,16 @@ let x = 10; let y = 10; let r = 200; g = 180; b = 0;
 let xPosition = 0;
 let yPosition = 0;
 
+let sensor = new Gyroscope();
+    sensor.start();
+    sensor.onreading = () => {
+       x = sensor.x * 100;
+       y = senosr.y * 100;
+       xPosition.style.left = (xPosition.offsetLeft + x) + "px"
+       yPosition.style.top = (yPosition.offsetTop - y) + "px"
+     };
+     console.log(x,y)
+     console.log(xPosition,yPosition)
 
 function setup() {
     canvas = createCanvas(500, 800, 'beholder');
@@ -22,6 +32,10 @@ function setup() {
     const p = select('#test1').elt;
     // indsæt canvas i ny position i rækkefølgen af elementer i div'en beholder
     parentDiv.insertBefore(canvas.elt, p);
+}
+
+function errorHandler(event){
+  console.log(event.error.name, event.error.message)
 }
 
 function draw() {
@@ -86,16 +100,7 @@ function draw() {
     x += xPosition;
     y += yPosition;
     rect(x, y, 10);
-    let sensor = new Gyroscope();
-    sensor.start();
-    sensor.onreading = () => {
-       x = sensor.x * 100;
-       y = senosr.y * 100;
-       xPosition = (xPosition + x) + "px"
-       yPosition = (yPosition - y) + "px"
-     };
-     console.log(x,y)
-     console.log(xPosition,yPosition)
+    
 }
     
 
