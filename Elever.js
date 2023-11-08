@@ -83,8 +83,6 @@ function draw() {
     }
 
     // loop over array - og spærg hver firkant om den rammer dig
-    x += xPosition;
-    y += yPosition;
     rect(x, y, 10);
     let sensor = new Gyroscope();
     sensor.start();
