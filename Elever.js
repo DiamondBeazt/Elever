@@ -1,6 +1,5 @@
 let x = 20; let y = 20; let r = 200; g = 180; b = 0;
 
-
 let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
@@ -95,8 +94,6 @@ function draw() {
     }
 
     // loop over array - og spærg hver firkant om den rammer dig
-    x += xPosition;
-    y += yPosition;
     rect(x, y, 10);
     player =  rect(x, y, 10);
     
