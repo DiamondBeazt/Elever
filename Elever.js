@@ -70,7 +70,7 @@ function draw() {
     x += xDirection;
     y += yDirection;
 
-    rect(20, 20, 10);
+    rect(x, y, 10);
 
 }
     
