@@ -1,4 +1,4 @@
-let y = 10; let x = 10; let r = 200; g = 180; b = 0;
+let r = 200; g = 180; b = 0;
 let xDirection = 0;
 let yDirection = 0;
 
@@ -70,7 +70,7 @@ function draw() {
     x += xDirection;
     y += yDirection;
 
-    rect(x, y, 10);
+    rect(20, 20, 10);
 
 }
     
@@ -91,14 +91,7 @@ function intersects(range) {
     if (range.x + range.w < x || range.x  > x + 10 || range.y + range.h < y || range.y > y + 10)
       return false;
     else if(yDirection < 3 && xDirection <3){
-      yDirection *= -1;   // +=0.5;
-      //yDirection +=0.5;
-      return true;
-    }
-    else{
-       xDirection *= 0.9;
-      yDirection *= 0.9;
-      return true;
+  
     }
   }
 
