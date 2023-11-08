@@ -3,8 +3,8 @@ let x = 20; let y = 20; let r = 200; g = 180; b = 0;
 let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
-       x = sensor.x * 1000;
-       y = sensor.y * 1000;
+       x = sensor.x * 300;
+       y = sensor.y * 300;
        player.style.left = (player.offsetLeft + x) + "px"
        player.style.top = (player.offsetTop - y) + "px"
      };
@@ -95,9 +95,7 @@ function draw() {
 
     // loop over array - og spærg hver firkant om den rammer dig
     rect(x, y, 10);
-    player =  rect(x, y, 10);
-    
-    console.log(player)
+    player = rect(x, y, 10);
 }
     
 
