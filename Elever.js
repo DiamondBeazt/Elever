@@ -83,6 +83,8 @@ function draw() {
     }
 
     // loop over array - og spærg hver firkant om den rammer dig
+    x += xPosition;
+    y += yPosition;
     rect(x, y, 10);
     let sensor = new Gyroscope();
     sensor.start();
@@ -97,7 +99,7 @@ function draw() {
     
 
 function intersects(range) {
-    
+    console.log(range)
     if (range.x + range.w < x || range.x  > x + 10 || range.y + range.h < y || range.y > y + 10)
       return false;
     else if(yPosition < 3 && xPosition <3){
