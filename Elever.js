@@ -5,8 +5,8 @@ let yPosition = 0;
 let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
-       x = sensor.x * 100;
-       y = senosr.y * 100;
+       x = sensor.x * 10;
+       y = sensor.y * 10;
        xPosition.style.left = (xPosition.offsetLeft + x) + "px"
        yPosition.style.top = (yPosition.offsetTop - y) + "px"
      };
