@@ -69,7 +69,6 @@ function draw() {
     // loop over array - og spærg hver firkant om den rammer dig
     x += xDirection;
     y += yDirection;
-
     rect(x, y, 10);
 
 }
@@ -78,8 +77,8 @@ function draw() {
     let sensor = new Gyroscope();
     sensor.start();
     sensor.onreading = () => {
-        x = sensor.x * 1000;
-        y = senosr.y * 1000;
+        x = sensor.x * 100;
+        y = senosr.y * 100;
         xDirection.style.left = (xDirection.offsetLeft + x) + "px"
         yDirection.style.top = (yDirection.offsetTop - y) + "px"
     };
