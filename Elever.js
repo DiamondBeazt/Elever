@@ -1,6 +1,6 @@
 let x = 10; let y = 10; let r = 200; g = 180; b = 0;
-let xPosition = 1;
-let yPosition = 1;
+let xPosition = 0;
+let yPosition = 0;
 
 
 function setup() {
