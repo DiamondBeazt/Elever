@@ -74,16 +74,17 @@ function draw() {
 }
     
 
-    let sensor = new Gyroscope();
-    sensor.start();
-    sensor.onreading = () => {
-        x = sensor.x * 100;
-        y = senosr.y * 100;
-        xDirection.style.left = (xDirection.offsetLeft + x) + "px"
-        yDirection.style.top = (yDirection.offsetTop - y) + "px"
+function gyro(){
+  let sensor = new Gyroscope();
+   sensor.start();
+   sensor.onreading = () => {
+      x = sensor.x * 100;
+      y = senosr.y * 100;
+      xDirection.style.left = (xDirection.offsetLeft + x) + "px"
+      yDirection.style.top = (yDirection.offsetTop - y) + "px"
     };
     console.log(x,y)
-
+}
 
 function intersects(range) {
     
