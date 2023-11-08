@@ -98,17 +98,6 @@ function draw() {
 }
     
 
-  let sensor = new Gyroscope();
-   sensor.start();
-   sensor.onreading = () => {
-      x = sensor.x * 100;
-      y = senosr.y * 100;
-      xDirection = (xDirection + x) + "px"
-      yDirection = (yDirection - y) + "px"
-    };
-    console.log(x,y)
-
-
 function intersects(range) {
     
     if (range.x + range.w < x || range.x  > x + 10 || range.y + range.h < y || range.y > y + 10)
