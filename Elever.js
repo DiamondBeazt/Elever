@@ -1,4 +1,4 @@
-let x = 10; let y = 10; let r = 200; g = 180; b = 0;
+let x; let y; let r = 200; g = 180; b = 0;
 let xPosition = 0;
 let yPosition = 0;
 
